@@ -1,0 +1,114 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+nav {
+    background-color: #48bfe3;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1d3557;
+}
+
+/* Header */
+header {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Buttons and Form */
+button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d7a6e;
+}
+
+/* Input Field Styling */
+input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2a9d8f;
+}
+
+/* Results Sections */
+.results-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.hospital-list .hospital {
+    background-color: #f4a261;
+    border: 1px solid #d6a941;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.hospital-list .hospital:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1d3557;
+    color: white;
+}
+
+footer a {
+    color: #f4a261;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e76f51;
+}

@@ -1,0 +1,28 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('user-form');
+    const resultsDiv = document.getElementById('results');
+
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        
+        // Fetch recommendations based on user input
+        const state = form.state.value;
+        // Get other input fields if needed
+        
+        const response = await fetch(`/recommend_hospitals?state=${state}`);
+        const data = await response.json();
+
+        // Display recommendations
+        resultsDiv.innerHTML = ''; // Clear previous results
+        data.forEach(hospital => {
+            const hospitalDiv = document.createElement('div');
+            hospitalDiv.className = 'hospital';
+            hospitalDiv.innerHTML = `
+                <h3>${hospital['Hospital Name']}</h3>
+                <p>Address: ${hospital['Address']}</p>
+                <!-- Display other information here -->
+            `;
+            resultsDiv.appendChild(hospitalDiv);
+        });
+    });
+});

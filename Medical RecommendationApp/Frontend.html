@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor & Hospital Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Doctor & Hospital Recommendation</h1>
+    </header>
+    <main>
+        <!-- User input form -->
+        <section class="user-form-section">
+            <h2>Find Hospitals</h2>
+            <form id="user-form">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+                <!-- Add more input fields here -->
+                <button type="submit">Recommend</button>
+            </form>
+        </section>
+
+        <!-- Recommended results -->
+        <section class="results-section">
+            <h2>Recommended Hospitals</h2>
+            <div id="results" class="hospital-list"></div>
+        </section>
+
+        <!-- Detailed hospital recommendations -->
+        <section class="detailed-results-section">
+            <h2>Hospital Details</h2>
+            <div id="detailed-hospital" class="hospital-details"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Doctor & Hospital Recommendation App</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
